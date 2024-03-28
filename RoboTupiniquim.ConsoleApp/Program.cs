@@ -109,10 +109,6 @@ namespace RoboTupiniquim.ConsoleApp
 
                         for (int i = 0; i < comandoSequenciaI.Length; i++)
                         {
-                            // Atribuir numeros a direções, como se fosse um relógio
-                            // Caso seja sentido anti-horário (esquerada), você diminui o valor
-                            // Caso seja sentido horário (direita), você aumenta o valor
-                            // Se passar da quantidade de direções (0 ou 5), retonara para o valor da próxima direção (4 ou 1)
                             if (comandoSequenciaI[i] == 'E')
                             {
                                 direcaoRoboINumero = direcaoRoboINumero - 1;
@@ -131,10 +127,6 @@ namespace RoboTupiniquim.ConsoleApp
                             }
                             else if (comandoSequenciaI[i] == 'M')
                             {
-                                // Considere as direções como numeros e pense no plano cartesiano de X e Y.
-                                // Se 1 = Norte, então a coordenada Y irá aumentar em 1 ao se movimentar.
-                                // Se 2 = Leste, então a coordenada X irá aumentar em 1 ao se movimentar.
-                                // Repita o mesmo fluxo porém negativamente para Sul e Oeste.
                                 switch (direcaoRoboINumero)
                                 {
                                     case 1:
@@ -153,7 +145,6 @@ namespace RoboTupiniquim.ConsoleApp
                             }
                         }
 
-                        // Retorna o número da direção após a movimentação para letra, para exibir o resultado.
                         switch (direcaoRoboINumero)
                         {
                             case 1:
@@ -247,10 +238,6 @@ namespace RoboTupiniquim.ConsoleApp
 
                             for (int i = 0; i < comandoSequenciaII.Length; i++)
                             {
-                                // Atribuir números a direções, como se fosse um relógio
-                                // Caso seja sentido anti-horário (esquerda), você diminui o valor
-                                // Caso seja sentido horário (direita), você aumenta o valor
-                                // Se passar da quantidade de direções (0 ou 5), retonara para o valor da próxima direção (4 ou 1)
                                 if (comandoSequenciaII[i] == 'E')
                                 {
                                     direcaoRoboIINumero = direcaoRoboIINumero - 1;
@@ -269,10 +256,6 @@ namespace RoboTupiniquim.ConsoleApp
                                 }
                                 else if (comandoSequenciaII[i] == 'M')
                                 {
-                                    // Considere as direções como números e pense no plano cartesiano de X e Y.
-                                    // Se 1 = Norte, então a coordenada Y irá aumentar em 1 ao se movimentar.
-                                    // Se 2 = Leste, então a coordenada X irá aumentar em 1 ao se movimentar.
-                                    // Repita o mesmo fluxo porém negativamente para Sul e Oeste.
                                     switch (direcaoRoboIINumero)
                                     {
                                         case 1:
@@ -291,7 +274,6 @@ namespace RoboTupiniquim.ConsoleApp
                                 }
                             }
 
-                            // Retorna o número da direção após a movimentação para letra, para exibir o resultado.
                             switch (direcaoRoboIINumero)
                             {
                                 case 1:
@@ -333,7 +315,6 @@ namespace RoboTupiniquim.ConsoleApp
 
                         Console.Read();
 
-                        // Variavel para manter o Loop aberto e adicionar uma possível verificação do programa caso necessário
                         bool opcaoValida = false;
                         while (opcaoValida == false)
                         {
